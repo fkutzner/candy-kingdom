@@ -58,6 +58,6 @@ script:
   - ctest -V
 
   - if [ "$CANDY_MODE" = "COVERAGE" ]; then
-      coveralls ;
+      coveralls --root $TRAVIS_BUILD_DIR --build-root . ;
     fi
 install:
